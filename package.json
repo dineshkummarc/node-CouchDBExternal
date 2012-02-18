@@ -1,0 +1,17 @@
+{
+    "name": "CouchDBExternal",
+    "version": "0.0.1",
+    "author": {
+        "name": "Jan Lehnardt",
+        "email": "jan@apache.org"
+    },
+    "description": "Write CouchDB Externals. Easy.",
+    "keywords": ["couchdb", "externals"],
+    "homepage": "http://github.com/janl/node-CouchDBExternal",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/janl/node-CouchDBExternal"
+    },
+    "engines": [ "node" ], 
+    "main": "./CouchDBExternal.js"
+}
