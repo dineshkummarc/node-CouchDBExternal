@@ -50,6 +50,9 @@ And second, make your external executable:
 
 (* Note to self: check out Windows)
 
+
+#### …with Futon
+
 See, easy. Now we can configure CouchDB. We need to add a new entry to
 the configuration section `os_daemons`. There are multiple ways to do
 this. One is Futon, CouchDB's built-in admin interface. Go to
@@ -59,10 +62,16 @@ For the section, put in `os_daemons`, for the name put in `my_external`
 and for the value put in `/path/to/your/external`. Hit save and you are
 done.
 
+
+#### …or `curl`
+
 You can also configure CouchDB using `curl` with a single request:
 
     $ curl -X PUT http://127.0.0.1:5984/_config/os_daemons/my_external \
         -d '"/path/to/your/external"'
+
+
+#### …or `local.ini`
 
 Another way is to edit your `local.ini` file directly and create a new
 section in there:
@@ -74,6 +83,8 @@ section in there:
 
 Then restart CouchDB. Note, the previous methods didn't require a
 restart. CouchDB takes care of that for you.
+
+#### …or `local.d` (recommended)
 
 Even better than the one before though is to create a new file
 `my_xternal.ini` with the same contents shown in the previous step and
